@@ -1,11 +1,9 @@
-﻿namespace Models
+﻿namespace Model
 {
-    public class Model
-    {
         public class Report
         {
             public int reportId { get; set; }
-            public int userId { get; set; }
+            public int id { get; set; }
             public string reportTitle { get; set; }
             public string reportDescription { get; set; }
             public string priority { get; set; }
@@ -25,5 +23,4 @@
             public int roleId { get; set; }
             public string roleName { get; set; }
         }
-    }
 }

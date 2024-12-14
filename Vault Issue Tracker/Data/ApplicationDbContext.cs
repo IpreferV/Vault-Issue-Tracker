@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Model;
 
 namespace Vault_Issue_Tracker.Data
 {
@@ -8,12 +9,13 @@ namespace Vault_Issue_Tracker.Data
         {
         }
 
-        public DbSet<Model> TableName { get; set; }
+        public DbSet<Report> Reports { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Roles> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }
