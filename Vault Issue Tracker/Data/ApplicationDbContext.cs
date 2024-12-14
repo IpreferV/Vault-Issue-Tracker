@@ -10,8 +10,6 @@ namespace Vault_Issue_Tracker.Data
         }
 
         public DbSet<Report> Reports { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Roles> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

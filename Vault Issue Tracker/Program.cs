@@ -1,3 +1,4 @@
+using Manager.Services;
 using Microsoft.EntityFrameworkCore;
 using Vault_Issue_Tracker.Data;
 
@@ -12,6 +13,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register the IReportService with its implementation
+builder.Services.AddScoped<IReportService, ReportService>();
 
 var app = builder.Build();
 
